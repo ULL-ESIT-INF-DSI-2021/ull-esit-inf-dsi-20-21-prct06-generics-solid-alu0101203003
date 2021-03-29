@@ -1,12 +1,13 @@
 import 'mocha';
 import {expect} from 'chai';
-import {Fighter} from '../src/ejercicio-1/fighter';
 import {Pokemon} from '../src/ejercicio-1/pokemon';
 import {Dragonball} from '../src/ejercicio-1/dragonball';
+import {Dc} from '../src/ejercicio-1/dc';
 
 describe('Ejercicio 1: El combate definitivo', () => {
   var pikachu = new Pokemon("Pikachu",6.0, 0.4,"pika pi",[49,49,45,45], "electrico")
   var goku = new Dragonball("Goku", 1.75, 62.0,"Espero que renazcas como un buen tipo, te estaré esperando para pelear",[68,40,60,50], "saiyan")
+  var batman = new Dc("Batman", 1.92, 102.0, "Im Batman", [45,70,55,60], "Gotham")
 
   describe('Probar llamadas a las funciones de la clase Pokemon', () => {
     it('pikachu.getNombre() returns value Pikachu', () => {
@@ -35,8 +36,14 @@ describe('Ejercicio 1: El combate definitivo', () => {
   });
 
   describe('Probar llamadas a las funciones de la clase Dragonball', () => { 
-    it('pikachu.getRaza() returns saiyan', () => {
+    it('goku.getRaza() returns saiyan', () => {
       expect(goku.getRaza()).to.be.equal('saiyan');
+    });
+  });
+
+  describe('Probar llamadas a las funciones de la clase Dc', () => { 
+    it('batman.getCiudad() returns Gotham', () => {
+      expect(batman.getCiudad()).to.be.equal('Gotham');
     });
   });
 });
