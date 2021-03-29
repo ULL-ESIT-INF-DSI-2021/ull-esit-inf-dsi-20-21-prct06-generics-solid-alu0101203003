@@ -1,11 +1,12 @@
 import {Fighter} from "./fighter";
 
+
 /**
- * Clase Pokemon
- * Representa a los luchadores del universo Pokemon
+ * Clase Dc
+ * Representa a los luchadores del universo DC
  * Hereda de la clase Fighter
  */
-export class Pokemon extends Fighter {
+export class Dc extends Fighter {
     /**
      * Constructor
      * @param nombre nombre del luchador (heredado de Fighter)
@@ -13,25 +14,25 @@ export class Pokemon extends Fighter {
      * @param altura altura del luchador (heredada de Fighter)
      * @param phrase catching phrase del luchador (heredada de Fighter)
      * @param estadisticas estadisticas asignables al atributo "EstadisticasBasicas" del luchador (heredadas de Fighter)
-     * @param tipo tipo del pokemon (hierba, electrico...)
+     * @param ciudad ciudad donde reside el luchador 
      */
-    constructor (nombre :string, peso :number, altura :number, phrase :string, estadisticas :number[], private tipo :string){
+    constructor (nombre :string, peso :number, altura :number, phrase :string, estadisticas :number[], private ciudad :string){
         super(nombre,peso,altura,phrase,estadisticas)
     }
 
     /**
-     * Funcion getTipo
-     * @returns tipo
+     * Funcion getCiudad
+     * @returns ciudad
      */
-     public getTipo(){
-        return this.tipo
+     public getCiudad(){
+        return this.ciudad
     }
 
     /**
-     * Funcion setTipo
-     * @param tipo tipo a asignar
+     * Funcion setCiudad
+     * @param ciudad ciudad a asignar
      */
-    public setTipo(tipo :string){
-        this.tipo = tipo
+    public setCiudad(ciudad :string){
+        this.ciudad = ciudad
     }
 }
