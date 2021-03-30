@@ -6,6 +6,7 @@ import {Tiempo} from '../src/ejercicio-2/tiempo';
 import {Masa} from '../src/ejercicio-2/masa';
 import {Fuerza} from '../src/ejercicio-2/fuerza';
 import {Temperatura} from '../src/ejercicio-2/temperatura';
+import {Volumen} from '../src/ejercicio-2/volumen';
 
 describe('Ejercicio 2: Conversor de unidades', () => {
     var longitud1 = new Longitud(20)
@@ -20,6 +21,8 @@ describe('Ejercicio 2: Conversor de unidades', () => {
     var fuerza1 = new Fuerza(10)
 
     var temperatura1 = new Temperatura(40)
+
+    var volumen1 = new Volumen(10)
 
     describe('Prueba de la clase longitud', () => {
         it('longitud1.convert("Kilometros a Metros") returns value 20000.0', () => {
@@ -82,6 +85,16 @@ describe('Ejercicio 2: Conversor de unidades', () => {
 
         it('temperatura1.convert("Celcius a Kelvin") returns value 313.15', () => {
             expect(temperatura1.convert("Celcius a Kelvin")).to.be.equal(313.15);
+        });
+    });
+
+    describe('Prueba de la clase volumen', () => {
+        it('volumen1.convert("Litros a Metros Cubicos") returns value 0.01', () => {
+          expect(volumen1.convert("Litros a Metros Cubicos")).to.be.equal(0.01);
+        });
+
+        it('volumen1.convert("Litros a Mililitros") returns value 10000', () => {
+            expect(volumen1.convert("Litros a Mililitros")).to.be.equal(10000);
         });
     });
 
