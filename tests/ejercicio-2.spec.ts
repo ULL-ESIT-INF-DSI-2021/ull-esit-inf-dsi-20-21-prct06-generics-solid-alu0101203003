@@ -5,6 +5,7 @@ import {Velocidad} from '../src/ejercicio-2/velocidad';
 import {Tiempo} from '../src/ejercicio-2/tiempo';
 import {Masa} from '../src/ejercicio-2/masa';
 import {Fuerza} from '../src/ejercicio-2/fuerza';
+import {Temperatura} from '../src/ejercicio-2/temperatura';
 
 describe('Ejercicio 2: Conversor de unidades', () => {
     var longitud1 = new Longitud(20)
@@ -17,6 +18,8 @@ describe('Ejercicio 2: Conversor de unidades', () => {
     var masa1 = new Masa(300)
 
     var fuerza1 = new Fuerza(10)
+
+    var temperatura1 = new Temperatura(40)
 
     describe('Prueba de la clase longitud', () => {
         it('longitud1.convert("Kilometros a Metros") returns value 20000.0', () => {
@@ -72,5 +75,14 @@ describe('Ejercicio 2: Conversor de unidades', () => {
         });
     });
 
+    describe('Prueba de la clase temperatura', () => {
+        it('temperatura1.convert("Celcius a Fahrenheit") returns value 104', () => {
+          expect(temperatura1.convert("Celcius a Fahrenheit")).to.be.equal(104);
+        });
+
+        it('temperatura1.convert("Celcius a Kelvin") returns value 313.15', () => {
+            expect(temperatura1.convert("Celcius a Kelvin")).to.be.equal(313.15);
+        });
+    });
 
 });
