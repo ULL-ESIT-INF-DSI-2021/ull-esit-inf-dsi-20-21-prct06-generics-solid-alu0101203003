@@ -3,6 +3,8 @@ import {expect} from 'chai';
 import {Longitud} from '../src/ejercicio-2/longitud';
 import {Velocidad} from '../src/ejercicio-2/velocidad';
 import {Tiempo} from '../src/ejercicio-2/tiempo';
+import {Masa} from '../src/ejercicio-2/masa';
+import {Fuerza} from '../src/ejercicio-2/fuerza';
 
 describe('Ejercicio 2: Conversor de unidades', () => {
     var longitud1 = new Longitud(20)
@@ -11,6 +13,10 @@ describe('Ejercicio 2: Conversor de unidades', () => {
     var velocidad1 = new Velocidad(120)
 
     var tiempo1 = new Tiempo(4)
+
+    var masa1 = new Masa(300)
+
+    var fuerza1 = new Fuerza(10)
 
     describe('Prueba de la clase longitud', () => {
         it('longitud1.convert("Kilometros a Metros") returns value 20000.0', () => {
@@ -45,5 +51,26 @@ describe('Ejercicio 2: Conversor de unidades', () => {
             expect(tiempo1.convert("Meses a Dias")).to.be.equal(120);
         });
     });
+
+    describe('Prueba de la clase masa', () => {
+        it('masa1.convert("Kilos a Toneladas") returns value 0.3', () => {
+          expect(masa1.convert("Kilos a Toneladas")).to.be.equal(0.3);
+        });
+
+        it('masa1.convert("Kilos a Gramos") returns value 300000', () => {
+            expect(masa1.convert("Kilos a Gramos")).to.be.equal(300000);
+        });
+    });
+
+    describe('Prueba de la clase fuerza', () => {
+        it('fuerza1.convert("Kilopondios a Newtons") returns value 98.06649999999999', () => {
+          expect(fuerza1.convert("Kilopondios a Newtons")).to.be.equal(98.06649999999999);
+        });
+
+        it('fuerza1.convert("Newtons a Dinas") returns value 1000000', () => {
+            expect(fuerza1.convert("Newtons a Dinas")).to.be.equal(1000000);
+        });
+    });
+
 
 });
