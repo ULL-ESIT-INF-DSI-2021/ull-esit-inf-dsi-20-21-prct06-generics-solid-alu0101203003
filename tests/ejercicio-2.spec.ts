@@ -2,12 +2,15 @@ import 'mocha';
 import {expect} from 'chai';
 import {Longitud} from '../src/ejercicio-2/longitud';
 import {Velocidad} from '../src/ejercicio-2/velocidad';
+import {Tiempo} from '../src/ejercicio-2/tiempo';
 
 describe('Ejercicio 2: Conversor de unidades', () => {
     var longitud1 = new Longitud(20)
     var longitud2 = new Longitud(2.5)
 
     var velocidad1 = new Velocidad(120)
+
+    var tiempo1 = new Tiempo(4)
 
     describe('Prueba de la clase longitud', () => {
         it('longitud1.convert("Kilometros a Metros") returns value 20000.0', () => {
@@ -30,6 +33,16 @@ describe('Ejercicio 2: Conversor de unidades', () => {
 
         it('velocidad1.convert("Millas/hora a Kilometros/hora") returns value 193.07999999999998', () => {
             expect(velocidad1.convert("Millas/hora a Kilometros/hora")).to.be.equal(193.07999999999998);
+        });
+    });
+
+    describe('Prueba de la clase tiempo', () => {
+        it('tiempo1.convert("Semanas a Dias") returns value 28', () => {
+          expect(tiempo1.convert("Semanas a Dias")).to.be.equal(28);
+        });
+
+        it('tiempo1.convert("Meses a Dias") returns value 120', () => {
+            expect(tiempo1.convert("Meses a Dias")).to.be.equal(120);
         });
     });
 
