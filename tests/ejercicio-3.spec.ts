@@ -2,6 +2,7 @@ import 'mocha';
 import {expect} from 'chai';
 import {Peliculas, Pelicula} from '../src/ejercicio-3/peliculas';
 import {Series, Serie} from '../src/ejercicio-3/series';
+import {Documentales, Documental} from '../src/ejercicio-3/documentales';
 
 describe('Ejercicio 3: DSIflix', () => {
     var pelicula1 :Pelicula = {
@@ -39,11 +40,26 @@ describe('Ejercicio 3: DSIflix', () => {
         temporadas: "6"
     }
 
+    var documental1 :Documental = {
+        nombre: "El Imperio Romano",
+        año: "2016",
+        genero: "Historia",
+        duracion: "51 min"
+    }
+
+    var documental2 :Documental = {
+        nombre: "Cosmos: A Spacetime Odyssey",
+        año: "2014",
+        genero: "Espacio",
+        duracion: "44 min"
+    }
 
     var peliculas = new Peliculas([pelicula1,pelicula2]);
     peliculas.add(pelicula3)
 
     var series = new Series([serie1,serie2]);
+
+    var documentales = new Documentales([documental1,documental2])
 
     describe('Pruebas de las funciones de BasicStreamableCollection', () => {
         it('peliculas.getColeccion() not returns null', () => {
@@ -66,6 +82,15 @@ describe('Ejercicio 3: DSIflix', () => {
         });
         it('Series con nombre Lost', () => {
             console.log(series.search("Lost","nombre"))
+        });
+    });
+
+    describe('Pruebas de busqueda en la clase Documentales', () => {
+        it('Documentales de 51 minutos', () => {
+          console.log(documentales.search("51 min","duracion"))
+        });
+        it('Documentales del Espacio', () => {
+            console.log(documentales.search("Espacio","genero"))
         });
     });
 });
