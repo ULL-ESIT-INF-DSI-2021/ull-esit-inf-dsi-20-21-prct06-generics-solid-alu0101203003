@@ -557,7 +557,8 @@ Cada clase usará un tipo de dato y estos tendrán atributos distintos, por lo t
 
 ### Conclusiones
 
-Esta práctica me resultó de gran utilidad para poner en práctica los conocimientos sobre objetos, clases e interfaces. He aprendido bastante sobre este tipo de datos y, sin duda, serán herramientas que usaré a menudo en mis siguientes proyectos de TypeScript.
+Con esta práctica he aprendido una nueva metodología de trabajo basada en seguir los principios SOLID que, con seguridad, será muy útil para identificar y resolver problemas en mis actuales y siguientes desarrollos. 
+A la par, he aprendido información valiosa acerca de las interfaces y clases genéricas que me ayudará a desarrollar programas mucho más flexibles.
 
 ### Bibliografía
 
@@ -565,7 +566,6 @@ A continuación se muestra una serie de recursos que han sido de gran utilidad p
 
 Recurso| Dirección
 -------|----------
-Guía de la práctica | https://ull-esit-inf-dsi-2021.github.io/prct05-objects-classes-interfaces/
-Apuntes | https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-arrays-tuples-enums.html
-W3schools | https://www.w3schools.com/
-Instancias y constructores | https://stackoverflow.com/questions/6973866/javascript-get-type-instance-name/36094818
+Guía de la práctica | https://ull-esit-inf-dsi-2021.github.io/prct06-generics-solid/
+Apuntes | https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-generics.html
+Principios SOLID | https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-solid.html
