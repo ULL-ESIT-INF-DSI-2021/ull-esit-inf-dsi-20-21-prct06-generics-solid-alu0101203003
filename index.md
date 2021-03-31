@@ -283,6 +283,9 @@ Por último, la clase Pokedex ahora podrá albergar luchadores de todos los tipo
 }
 ```
 
+<img src="img/1a.PNG" alt="" />
+<img src="img/1b.PNG" alt="" />
+
 #### 2.2 Ejercicio 2
 
 **Enunciado:**
@@ -305,7 +308,7 @@ Diseñe una interfaz genérica isConvertible que permita realizar conversiones e
 
 **Resolución:**
 
-Partiremos de la interfaz genérica isConvertible, la cual determinará que, la clase que la implemente, tenga un atributo *unidad* (que representa el numero a convertir de una unidad a otra o la cantidad de unidades) y un atributo *cambios* (que albergará todos los cambios entre unidades disponibles para cada magnitud). Además, todas estas clases deberán implementar también la función *convert*, encargada de convertir las unidades en función del cambio especificado:
+Partiremos de la interfaz genérica isConvertible, la cual determinará que la clase que la implemente tenga un atributo *unidad* (que representa el numero a convertir de una unidad a otra o la cantidad de unidades) y un atributo *cambios* (que albergará todos los cambios entre unidades disponibles para cada magnitud). Además, todas estas clases deberán implementar también la función *convert*, encargada de convertir las unidades en función del cambio especificado:
 
 ```ts
 /**
@@ -325,3 +328,244 @@ Partiremos de la interfaz genérica isConvertible, la cual determinará que, la 
     convert(conversion :string): number;
 }
 ```
+
+Cada clase hija representará una magnitud. Estas Implementarán la interfaz isConvertible de tal manera que, en cada caso, permita cambiar entre ciertas unidades especificadas. Cada magnitud tendrá su propio array con los cambios disponibles que será usado en la función convert para comparar con el parámetro recibido y realizar la operación pertinente para llevar a cabo la conversión en cada caso (la función devolverá la unidad convertida satisfactoriamente). A continuación un ejemplo con Longitud:
+
+```ts
+/**
+ * Array que contiene los posibles cambios 
+ * (La conversion deberá coincidir con alguno de ellos)
+*/
+var cambiosLongitud :string[] = ["Metros a Kilometros","Kilometros a Metros",
+                                "Metros a Centimetros","Centimetros a Metros",
+                                "Kilometros a Centimetros","Centimetros a Kilometros"]
+/**
+ * Clase Longitud.
+ * Posibilita los cambios de unidades de Longitud.
+ * Implementa la interfaz isConvertible
+ */
+export class Longitud implements isConvertible<string[]> {
+    cambios = cambiosLongitud;
+    /**
+     * Constructor
+     * @param unidad unidad de medida que va a ser convertida
+     */
+    constructor(public unidad :number){}
+
+    /**
+     * Funcion convert. 
+     * Convierte la unidad del objeto al que se aplica 
+     * en función de la conversion recibida como parámetro
+     * @param conversion
+     */
+    convert(conversion :string){
+        var resultado :number = 0;
+        switch (conversion) {
+            case this.cambios[0]:
+                resultado = this.unidad/1000
+                break;
+            case this.cambios[1]:
+                resultado = this.unidad*1000
+                break;
+            case this.cambios[2]:
+                resultado = this.unidad*100
+                break;
+            case this.cambios[3]:
+                resultado = this.unidad/100
+                break;
+            case this.cambios[4]:
+                resultado = this.unidad*100000
+                break;
+            case this.cambios[5]:
+                resultado = this.unidad/100000
+                break;
+            default:
+                break;
+        }
+        return resultado
+    }
+```
+<img src="img/2.PNG" alt="" />
+
+#### 2.3 Ejercicio 3
+
+**Enunciado:**
+
+Imagine que tiene que diseñar el modelo de datos de una plataforma de vídeo en streaming. A través del catálogo de dicha plataforma se puede acceder a películas, series y documentales:
+
+* Defina una interfaz genérica Streamable que trate de especificar propiedades y métodos con los que debería contar una colección de emisiones concreta como, por ejemplo, una colección de series. Por ejemplo, deberían definirse métodos de búsqueda en dicha interfaz, que permitan obtener listados en función de diferentes términos de búsqueda: por año o por nombre, entre otros.
+* Defina una clase abstracta genérica BasicStreamableCollection que implemente dicha interfaz genérica. En este punto, podrá particularizar algunas de las propiedades y métodos de la interfaz Streamable, aunque otros tendrán que permanecer como abstractos para ser definidos más abajo en la jerarquía de clases. Todo dependerá del diseño que haya llevado a cabo.
+* Tendrá que extender dicha clase abstracta para obtener subclases que modelen cada uno de los tres tipos de colecciones: series, películas y documentales.
+* Trate de aplicar los principios SOLID. Preste especial atención al diseño de la interfaz Streamable. Si cree que debe dividirla en interfaces genéricas más pequeñas porque su diseño inicial es muy complejo, hágalo, con el objetivo de cumplir con el cuarto principio SOLID Interface segregation.
+
+**Resolución:**
+
+Para resolver este problema crearemos la interfaz genérica Streamable que contiene un atributo colección para almacenar elementos y dos funciones que permiten mostrar y ampliar la colección: 
+
+```ts
+/**
+ * Interfaz Streameable para una colección de emisiones
+ */
+ export interface Streamable<T> {
+    coleccion: T[]
+
+    /**
+     * Funcion add.
+     * Añade una emision nueva a la coleccion
+     * @param emision emision a añadir
+     */
+    add(emision :T): void;
+
+    /**
+     * Funcion getColeccion. 
+     * Devuelve la coleccion de emisiones
+     */
+    getColeccion(): T[];
+}
+```
+
+En el futuro requeriremos de una función que nos permita buscar dentro de la colección en función de ciertos parámetros pero, si usáramos la misma interfaz para este propósito, acabaría resultando muy compleja. Por ello, seguiremos el principio de Interface segregation y crearemos otra interfaz Searchable que contenga una función que nos permita buscar:
+
+```ts
+/**
+ * Interfaz Searchable para la funcion de busqueda.
+ * (Segregacion de Interfaces)
+ */
+ export interface Searchable<T> {
+    /**
+     * Funcion Search.
+     * Busca, dentro de la coleccion, los elementos que tienen el atributo especificado
+     * @param atributo atributo a encontrar
+     * @param tipo tipo del atributo
+     */
+    search(atributo :string, tipo :string): T[]
+}
+```
+Crearemos una clase abstracta BasicStreamableCollection que implementará estas dos interfaces, dando como resultado una clase genérica capaz de ser usada para cada tipo de colección de emisiones. Esta clase implementará las funciones que tienen que ver con mostrar y añadir elementos a la colección ya que serán comunes para todas las colecciones. Sin embargo, el método search permanecerá abstracto a la espera de ser implementado de manera única en cada colección (ya que la búsqueda será distinta para cada una de ellas):
+
+```ts
+export abstract class BasicStreamableCollection<T> implements Streamable<T>,Searchable<T>{
+    constructor(public coleccion: T[]){}
+
+    /**
+     * Funcion add.
+     * Añade una emision nueva a la coleccion
+     * @param emision emision a añadir
+     */
+    add(emision :T){
+        this.coleccion.push(emision)
+    }
+
+    /**
+     * Funcion getColeccion. 
+     * Devuelve la coleccion de emisiones
+     */
+    getColeccion(){
+        return this.coleccion
+    }
+
+    /**
+     * Funcion Search.
+     * Busca, dentro de la coleccion, los elementos que tienen el atributo especificado
+     * @param atributo atributo a encontrar
+     * @param tipo tipo del atributo
+     */
+    abstract search(atributo :string, tipo :string): T[]
+}
+```
+
+Para cada tipo de colección se creará un tipo personalizado de emisiones que alberga en su colección, el cual contiene todos los atributos necesarios para definir cada emision:
+
+```ts
+/**
+ * Tipo Pelicula.
+ * Especifica los atributos que debe tener toda pelicula
+ */
+export type Pelicula = {
+    nombre:string,
+    año :string,
+    genero :string,
+    director :string
+}
+```
+La clase de cada colección heredará el atributo colección de la clase BasicStreamableCollection y lo usará a su manera con el tipo de dato que corresponda (por ejemplo: en el caso de colecciones de películas, se usará el tipo *Pelicula*):
+
+```ts
+/**
+ * Clase Peliculas.
+ * Almacena la coleccion de las peliculas y permite buscar dentro de esta coleccion
+ * Hereda de la clase BasicStreamableCollection
+ */
+export class Peliculas extends BasicStreamableCollection<Pelicula>{
+    /**
+     * Constructor
+     * @param coleccion coleccion de peliculas (usa la plantilla de BasicStreamableCollection)
+     */
+    constructor(coleccion :Pelicula[]){
+        super(coleccion)
+    }
+```
+
+Estas clases tendrán la responsabilidad de implementar el método search de manera que se pueda recorrer la colección por el tipo de atributo deseado (*tipo*) buscando el atributo concreto especificado en la función (*atributo*):
+
+```ts
+search(atributo :string, tipo :string){
+        var resultado :Pelicula[] = []
+        
+        switch (tipo){
+            case "nombre":
+                this.coleccion.forEach(element => {
+                    if (element.nombre == atributo) {
+                        resultado.push(element)
+                    }
+                });
+                break;
+            case "año":
+                this.coleccion.forEach(element => {
+                    if (element.año == atributo) {
+                        resultado.push(element)
+                    }
+                });
+                break;
+            case "genero":
+                this.coleccion.forEach(element => {
+                    if (element.genero == atributo) {
+                        resultado.push(element)
+                    }
+                });
+                break;
+            case "director":
+                this.coleccion.forEach(element => {
+                    if (element.director == atributo) {
+                        resultado.push(element)
+                    }
+                });
+                break;
+            default:
+                break;
+        }
+        return resultado
+     }
+```
+
+Cada clase usará un tipo de dato y estos tendrán atributos distintos, por lo tanto, la función search será distinta para cada clase.
+
+<img src="img/3a.PNG" alt="" />
+<img src="img/3b.PNG" alt="" />
+<img src="img/3c.PNG" alt="" />
+<img src="img/3d.PNG" alt="" />
+
+### Conclusiones
+
+Esta práctica me resultó de gran utilidad para poner en práctica los conocimientos sobre objetos, clases e interfaces. He aprendido bastante sobre este tipo de datos y, sin duda, serán herramientas que usaré a menudo en mis siguientes proyectos de TypeScript.
+
+### Bibliografía
+
+A continuación se muestra una serie de recursos que han sido de gran utilidad para la realización de la práctica y de este informe:
+
+Recurso| Dirección
+-------|----------
+Guía de la práctica | https://ull-esit-inf-dsi-2021.github.io/prct05-objects-classes-interfaces/
+Apuntes | https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-arrays-tuples-enums.html
+W3schools | https://www.w3schools.com/
+Instancias y constructores | https://stackoverflow.com/questions/6973866/javascript-get-type-instance-name/36094818
