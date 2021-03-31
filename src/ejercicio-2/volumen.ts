@@ -6,10 +6,17 @@ import {isConvertible} from "./isconvertible";
 */
 var cambiosVolumen :string[] = ["Metros Cubicos a Litros","Litros a Metros Cubicos",
                                 "Litros a Mililitros","Mililitros a Litros"]
-
+/**
+ * Clase Volumen.
+ * Posibilita los cambios de unidades de Volumen.
+ * Implementa la interfaz isConvertible
+ */
 export class Volumen implements isConvertible<string[]> {
     cambios = cambiosVolumen;
-
+    /**
+     * Constructor
+     * @param unidad unidad de medida que va a ser convertida
+     */
     constructor(public unidad :number){}
 
     /**

@@ -6,10 +6,17 @@ import {isConvertible} from "./isconvertible";
 */
 var cambiosTemperatura :string[] = ["Fahrenheit a Celcius","Celcius a Fahrenheit",
                                 "Kelvin a Celcius","Celcius a Kelvin"]
-
+/**
+ * Clase Temperatura.
+ * Posibilita los cambios de unidades de Temperatura.
+ * Implementa la interfaz isConvertible
+ */
 export class Temperatura implements isConvertible<string[]> {
     cambios = cambiosTemperatura;
-
+    /**
+     * Constructor
+     * @param unidad unidad de medida que va a ser convertida
+     */
     constructor(public unidad :number){}
 
     /**

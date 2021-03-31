@@ -6,10 +6,17 @@ import {isConvertible} from "./isconvertible";
 */
 var cambiosVelocidad :string[] = ["Kilometros/hora a Metros/segundo","Metros/segundo a Kilometros/hora",
                                 "Kilometros/hora a Millas/hora","Millas/hora a Kilometros/hora"]
-
+/**
+ * Clase Velocidad.
+ * Posibilita los cambios de unidades de Velocidad.
+ * Implementa la interfaz isConvertible
+ */
 export class Velocidad implements isConvertible<string[]> {
     cambios = cambiosVelocidad;
-
+    /**
+     * Constructor
+     * @param unidad unidad de medida que va a ser convertida
+     */
     constructor(public unidad :number){}
 
     /**

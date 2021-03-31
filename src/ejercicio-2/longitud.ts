@@ -7,10 +7,17 @@ import {isConvertible} from "./isconvertible";
 var cambiosLongitud :string[] = ["Metros a Kilometros","Kilometros a Metros",
                                 "Metros a Centimetros","Centimetros a Metros",
                                 "Kilometros a Centimetros","Centimetros a Kilometros"]
-
+/**
+ * Clase Longitud.
+ * Posibilita los cambios de unidades de Longitud.
+ * Implementa la interfaz isConvertible
+ */
 export class Longitud implements isConvertible<string[]> {
     cambios = cambiosLongitud;
-
+    /**
+     * Constructor
+     * @param unidad unidad de medida que va a ser convertida
+     */
     constructor(public unidad :number){}
 
     /**

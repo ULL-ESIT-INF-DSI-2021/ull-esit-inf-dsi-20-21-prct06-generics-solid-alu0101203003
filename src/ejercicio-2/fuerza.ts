@@ -7,9 +7,17 @@ import {isConvertible} from "./isconvertible";
 var cambiosFuerza :string[] = ["Kilopondios a Newtons","Newtons a Kilopondios",
                                 "Newtons a Dinas","Dinas a Newtons"]
 
+/**
+ * Clase Fuerza.
+ * Posibilita los cambios de unidades de Fuerza.
+ * Implementa la interfaz isConvertible
+ */
 export class Fuerza implements isConvertible<string[]> {
     cambios = cambiosFuerza;
-
+    /**
+     * Constructor
+     * @param unidad unidad de medida que va a ser convertida
+     */
     constructor(public unidad :number){}
 
     /**

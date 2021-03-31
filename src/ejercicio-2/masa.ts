@@ -6,10 +6,17 @@ import {isConvertible} from "./isconvertible";
 */
 var cambiosMasa :string[] = ["Gramos a Kilos","Kilos a Gramos",
                                 "Kilos a Toneladas","Toneladas a Kilos"]
-
+/**
+ * Clase Masa.
+ * Posibilita los cambios de unidades de Masa.
+ * Implementa la interfaz isConvertible
+ */
 export class Masa implements isConvertible<string[]> {
     cambios = cambiosMasa;
-
+    /**
+     * Constructor
+     * @param unidad unidad de medida que va a ser convertida
+     */
     constructor(public unidad :number){}
 
     /**

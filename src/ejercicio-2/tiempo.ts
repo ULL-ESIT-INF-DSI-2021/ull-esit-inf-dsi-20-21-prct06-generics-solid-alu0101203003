@@ -6,10 +6,17 @@ import {isConvertible} from "./isconvertible";
 */
 var cambiosTiempo :string[] = ["Semanas a Dias","Dias a Semanas",
                                 "Dias a Meses","Meses a Dias"]
-
+/**
+ * Clase Tiempo.
+ * Posibilita los cambios de unidades de Tiempo.
+ * Implementa la interfaz isConvertible
+ */
 export class Tiempo implements isConvertible<string[]> {
     cambios = cambiosTiempo;
-
+    /**
+     * Constructor
+     * @param unidad unidad de medida que va a ser convertida
+     */
     constructor(public unidad :number){}
 
     /**
