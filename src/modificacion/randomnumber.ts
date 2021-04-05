@@ -27,5 +27,17 @@
         return Math.floor(Math.random() * (m-n)) + n;
     }
 
+    /**
+     * Funcion print
+     * @param n valor minimo del rango
+     * @param m valor maximo del rango
+     * Imprime todas las formas de obtener el numero aleatorio
+     */
+    public print(n :number, m :number){
+        console.log("ran01: ",this.ran01())
+        console.log("ranNM: ",this.ranNM(n,m))
+        console.log("intRanNM: ",this.intRanNM(n,m))
+    }
+
     
 }

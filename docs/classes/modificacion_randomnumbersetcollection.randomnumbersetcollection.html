@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Pokedex | ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101203003</title>
+	<title>RandomNumberSetCollection | ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101203003</title>
 	<meta name="description" content="Documentation for ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101203003">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101203003</a>
 				</li>
 				<li>
-					<a href="../modules/ejercicio_1_pokedex.html">ejercicio-1/pokedex</a>
+					<a href="../modules/modificacion_randomnumbersetcollection.html">modificacion/randomnumbersetcollection</a>
 				</li>
 				<li>
-					<a href="ejercicio_1_pokedex.pokedex.html">Pokedex</a>
+					<a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html">RandomNumberSetCollection</a>
 				</li>
 			</ul>
-			<h1>Class Pokedex</h1>
+			<h1>Class RandomNumberSetCollection</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +71,8 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Clase que almacena un conjunto de luchadores</p>
+						<p>Clase RandomNumberSetCollection
+						Genera un conjunto de numeros aleatorios</p>
 					</div>
 				</div>
 			</section>
@@ -79,8 +80,14 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Pokedex</span>
+						<span class="target">RandomNumberSetCollection</span>
 					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><a href="modificacion_randomnumber.randomnumber.html" class="tsd-signature-type" data-tsd-kind="Class">RandomNumber</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -90,15 +97,22 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="ejercicio_1_pokedex.pokedex.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#numeros" class="tsd-kind-icon">numeros</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_1_pokedex.pokedex.html#addluchador" class="tsd-kind-icon">add<wbr>Luchador</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_1_pokedex.pokedex.html#getluchadores" class="tsd-kind-icon">get<wbr>Luchadores</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="ejercicio_1_pokedex.pokedex.html#setluchadores" class="tsd-kind-icon">set<wbr>Luchadores</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#_symbol_iterator_" class="tsd-kind-icon">[<wbr>Symbol.iterator]</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#addnumero" class="tsd-kind-icon">add<wbr>Numero</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#getcantidaddeelementos" class="tsd-kind-icon">get<wbr>Cantidad<wbr>DeElementos</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#print" class="tsd-kind-icon">print</a></li>
 							</ul>
 						</section>
 					</div>
@@ -110,13 +124,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Pokedex<span class="tsd-signature-symbol">(</span>luchadores<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><a href="ejercicio_1_dc.dc.html" class="tsd-signature-type" data-tsd-kind="Class">Dc</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_dragonball.dragonball.html" class="tsd-signature-type" data-tsd-kind="Class">Dragonball</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_pokemon.pokemon.html" class="tsd-signature-type" data-tsd-kind="Class">Pokemon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ejercicio_1_pokedex.pokedex.html" class="tsd-signature-type" data-tsd-kind="Class">Pokedex</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Random<wbr>Number<wbr>Set<wbr>Collection<span class="tsd-signature-symbol">(</span>numeros<span class="tsd-signature-symbol">: </span><a href="modificacion_randomnumber.randomnumber.html" class="tsd-signature-type" data-tsd-kind="Class">RandomNumber</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html" class="tsd-signature-type" data-tsd-kind="Class">RandomNumberSetCollection</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101203003/blob/3a59e73/src/ejercicio-1/pokedex.ts#L7">ejercicio-1/pokedex.ts:7</a></li>
+									<li>Defined in modificacion/randomnumbersetcollection.ts:9</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -127,43 +141,82 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>luchadores: <span class="tsd-signature-symbol">(</span><a href="ejercicio_1_dc.dc.html" class="tsd-signature-type" data-tsd-kind="Class">Dc</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_dragonball.dragonball.html" class="tsd-signature-type" data-tsd-kind="Class">Dragonball</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_pokemon.pokemon.html" class="tsd-signature-type" data-tsd-kind="Class">Pokemon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>numeros: <a href="modificacion_randomnumber.randomnumber.html" class="tsd-signature-type" data-tsd-kind="Class">RandomNumber</a><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>conjunto de luchadores</p>
+										<p>conjunto de numeros aleatorios</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="ejercicio_1_pokedex.pokedex.html" class="tsd-signature-type" data-tsd-kind="Class">Pokedex</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html" class="tsd-signature-type" data-tsd-kind="Class">RandomNumberSetCollection</a></h4>
 						</li>
 					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="numeros" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> numeros</h3>
+					<div class="tsd-signature tsd-kind-icon">numeros<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><a href="modificacion_randomnumber.randomnumber.html" class="tsd-signature-type" data-tsd-kind="Class">RandomNumber</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in modificacion/randomnumbersetcollection.ts:9</li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="addluchador" class="tsd-anchor"></a>
-					<h3>add<wbr>Luchador</h3>
+					<a name="_symbol_iterator_" class="tsd-anchor"></a>
+					<h3>[<wbr>Symbol.iterator]</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Luchador<span class="tsd-signature-symbol">(</span>luchador<span class="tsd-signature-symbol">: </span><a href="ejercicio_1_dc.dc.html" class="tsd-signature-type" data-tsd-kind="Class">Dc</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_dragonball.dragonball.html" class="tsd-signature-type" data-tsd-kind="Class">Dragonball</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_pokemon.pokemon.html" class="tsd-signature-type" data-tsd-kind="Class">Pokemon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">[<wbr>Symbol.iterator]<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterator</span><span class="tsd-signature-symbol">&lt;</span><a href="modificacion_randomnumber.randomnumber.html" class="tsd-signature-type" data-tsd-kind="Class">RandomNumber</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of Iterable.__@iterator</p>
+								<ul>
+									<li>Defined in modificacion/randomnumbersetcollection.ts:40</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Iterador.
+									Recorre el conjunto</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Iterator</span><span class="tsd-signature-symbol">&lt;</span><a href="modificacion_randomnumber.randomnumber.html" class="tsd-signature-type" data-tsd-kind="Class">RandomNumber</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>valores del conjunto</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addnumero" class="tsd-anchor"></a>
+					<h3>add<wbr>Numero</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Numero<span class="tsd-signature-symbol">(</span>numero<span class="tsd-signature-symbol">: </span><a href="modificacion_randomnumber.randomnumber.html" class="tsd-signature-type" data-tsd-kind="Class">RandomNumber</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101203003/blob/3a59e73/src/ejercicio-1/pokedex.ts#L34">ejercicio-1/pokedex.ts:34</a></li>
+									<li>Defined in modificacion/randomnumbersetcollection.ts:23</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Funcion addLuchador</p>
+									<p>Funcion addNumero.
+									Añade un numero al conjunto</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>luchador: <a href="ejercicio_1_dc.dc.html" class="tsd-signature-type" data-tsd-kind="Class">Dc</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_dragonball.dragonball.html" class="tsd-signature-type" data-tsd-kind="Class">Dragonball</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_pokemon.pokemon.html" class="tsd-signature-type" data-tsd-kind="Class">Pokemon</a></h5>
+									<h5>numero: <a href="modificacion_randomnumber.randomnumber.html" class="tsd-signature-type" data-tsd-kind="Class">RandomNumber</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>luchador a añadir al conjunto</p>
+										<p>numero a añadir</p>
 									</div>
 								</li>
 							</ul>
@@ -172,52 +225,60 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getluchadores" class="tsd-anchor"></a>
-					<h3>get<wbr>Luchadores</h3>
+					<a name="getcantidaddeelementos" class="tsd-anchor"></a>
+					<h3>get<wbr>Cantidad<wbr>DeElementos</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Luchadores<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><a href="ejercicio_1_dc.dc.html" class="tsd-signature-type" data-tsd-kind="Class">Dc</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_dragonball.dragonball.html" class="tsd-signature-type" data-tsd-kind="Class">Dragonball</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_pokemon.pokemon.html" class="tsd-signature-type" data-tsd-kind="Class">Pokemon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Cantidad<wbr>DeElementos<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101203003/blob/3a59e73/src/ejercicio-1/pokedex.ts#L18">ejercicio-1/pokedex.ts:18</a></li>
+									<li>Defined in modificacion/randomnumbersetcollection.ts:31</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Funcion getLuchadores</p>
+									<p>Funcion getCantidadDeElementos.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span><a href="ejercicio_1_dc.dc.html" class="tsd-signature-type" data-tsd-kind="Class">Dc</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_dragonball.dragonball.html" class="tsd-signature-type" data-tsd-kind="Class">Dragonball</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_pokemon.pokemon.html" class="tsd-signature-type" data-tsd-kind="Class">Pokemon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h4>
-							<p>luchadores a obtener</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>tamaño del conjunto</p>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="setluchadores" class="tsd-anchor"></a>
-					<h3>set<wbr>Luchadores</h3>
+					<a name="print" class="tsd-anchor"></a>
+					<h3>print</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Luchadores<span class="tsd-signature-symbol">(</span>luchadores<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><a href="ejercicio_1_dc.dc.html" class="tsd-signature-type" data-tsd-kind="Class">Dc</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_dragonball.dragonball.html" class="tsd-signature-type" data-tsd-kind="Class">Dragonball</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_pokemon.pokemon.html" class="tsd-signature-type" data-tsd-kind="Class">Pokemon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">print<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, m<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101203003/blob/3a59e73/src/ejercicio-1/pokedex.ts#L26">ejercicio-1/pokedex.ts:26</a></li>
+									<li>Defined in modificacion/randomnumbersetcollection.ts:51</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Funcion setLuchadores</p>
+									<p>Funcion print</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>luchadores: <span class="tsd-signature-symbol">(</span><a href="ejercicio_1_dc.dc.html" class="tsd-signature-type" data-tsd-kind="Class">Dc</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_dragonball.dragonball.html" class="tsd-signature-type" data-tsd-kind="Class">Dragonball</a><span class="tsd-signature-symbol"> | </span><a href="ejercicio_1_pokemon.pokemon.html" class="tsd-signature-type" data-tsd-kind="Class">Pokemon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>n: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>conjunto de luchadores a asignar</p>
+										<p>valor minimo del rango</p>
+									</div>
+								</li>
+								<li>
+									<h5>m: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>valor maximo del rango
+											Imprime todas las formas de obtener el numero aleatorio para cada número del conjunto.
+										(Llama a la función print para cada valor)</p>
 									</div>
 								</li>
 							</ul>
@@ -245,7 +306,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/ejercicio_1_fighter.html">ejercicio-<wbr>1/fighter</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/ejercicio_1_pokedex.html">ejercicio-<wbr>1/pokedex</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -296,7 +357,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/modificacion_randomnumber.html">modificacion/randomnumber</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/modificacion_randomnumbersetcollection.html">modificacion/randomnumbersetcollection</a>
 					</li>
 				</ul>
@@ -306,19 +367,25 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="ejercicio_1_pokedex.pokedex.html" class="tsd-kind-icon">Pokedex</a>
+						<a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html" class="tsd-kind-icon">Random<wbr>Number<wbr>Set<wbr>Collection</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="ejercicio_1_pokedex.pokedex.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#numeros" class="tsd-kind-icon">numeros</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="ejercicio_1_pokedex.pokedex.html#addluchador" class="tsd-kind-icon">add<wbr>Luchador</a>
+								<a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#_symbol_iterator_" class="tsd-kind-icon">[<wbr>Symbol.iterator]</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="ejercicio_1_pokedex.pokedex.html#getluchadores" class="tsd-kind-icon">get<wbr>Luchadores</a>
+								<a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#addnumero" class="tsd-kind-icon">add<wbr>Numero</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="ejercicio_1_pokedex.pokedex.html#setluchadores" class="tsd-kind-icon">set<wbr>Luchadores</a>
+								<a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#getcantidaddeelementos" class="tsd-kind-icon">get<wbr>Cantidad<wbr>DeElementos</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="modificacion_randomnumbersetcollection.randomnumbersetcollection.html#print" class="tsd-kind-icon">print</a>
 							</li>
 						</ul>
 					</li>
@@ -344,6 +411,9 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 			</ul>
 		</div>
 	</div>
