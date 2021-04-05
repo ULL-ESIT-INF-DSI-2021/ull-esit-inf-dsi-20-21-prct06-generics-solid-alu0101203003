@@ -19,7 +19,9 @@
         "./src/ejercicio-3/peliculas.ts",
         "./src/ejercicio-3/searchable.ts",
         "./src/ejercicio-3/series.ts",
-        "./src/ejercicio-3/streamable.ts"
+        "./src/ejercicio-3/streamable.ts",
+        "./src/modificacion/randomnumber.ts",
+        "./src/modificacion/randomnumbersetcollection.ts"
     ],
     "out": "./docs"
 
